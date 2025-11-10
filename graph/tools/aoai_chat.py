@@ -8,8 +8,9 @@
 
 ###############################################################################
 
-from app.settings import settings
 from openai import AzureOpenAI
+
+from app.settings import settings
 
 _client = AzureOpenAI(
     api_key=settings.aoai_api_key,

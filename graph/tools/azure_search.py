@@ -1,10 +1,11 @@
 from typing import Any, Dict, List
 
-from app.graph.tools.aoai_chat import embed
-from app.settings import settings
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.models import VectorQuery
+
+from app.graph.tools.aoai_chat import embed
+from app.settings import settings
 
 _client = SearchClient(
     endpoint=settings.search_endpoint,
